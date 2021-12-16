@@ -45,13 +45,13 @@ ReactDOM.render(
 				</Flex>
 				<Flex alignItems='flex-start' marginX='auto' gridGap={4}>
 					<Box m={4} maxW='xl'>
-						<Text fontSize='3xl' fontWeight='bold'>What's Canister?</Text>
+						<Text fontSize='3xl' fontWeight='bold'>What’s Canister?</Text>
 						<Text marginY={4}>
 							Canister is a state of the art search engine capable of retrieving data on thousands of packages spread across hundreds of repositories for your Jailbroken device. Currently it functions as an API, powering some of your favorite tools, but a website for everyone to browse is coming soon.
 						</Text>
 					</Box>
 					<Box>
-						<Text fontSize='3xl' fontWeight='bold'>Who's using Canister?</Text>
+						<Text fontSize='3xl' fontWeight='bold'>Who’s using Canister?</Text>
 						<Flex marginY={4} alignItems='center' gridGap={8}>
 							<Box justifyContent='center' alignItems='center' textAlign='center' columnGap={6}>
 								<Image
@@ -61,6 +61,16 @@ ReactDOM.render(
 								/>
 								<Link href='https://github.com/Sileo/Sileo' isExternal>
 									<Text decoration='underline' fontSize='lg' marginTop={3}>Sileo</Text>
+								</Link>
+							</Box>
+							<Box justifyContent='center' alignItems='center' textAlign='center' columnGap={6}>
+								<Image
+									src='/chariz.svg'
+									label='Chariz'
+									width={[50, 100]}
+								/>
+								<Link href='https://chariz.com' isExternal>
+									<Text decoration='underline' fontSize='lg' marginTop={3}>Chariz</Text>
 								</Link>
 							</Box>
 							<Box justifyContent='center' alignItems='center' textAlign='center' columnGap={6}>
