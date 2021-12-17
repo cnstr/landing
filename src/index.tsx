@@ -57,14 +57,14 @@ ReactDOM.render(
 					</Box>
 				</Flex>
 				<Spacer margin={8} />
-				<Flex gridGap={6} flexDir={{ base: 'column', md: 'row' }}>
-					<Box maxW='xs'>
+				<Flex gridGap={6} flexDir='column' alignItems='center'>
+					<Box maxW='2xl'>
 						<Heading fontSize='xl' marginBottom={2}>What is Canister?</Heading>
 						<Text marginBottom={4}>
 							Canister is a tool unlocking the ability to search for thousands of packages across hundreds of different Jailbreak repositories. All of this information is accessible through a public API with future plans to host a website for users to interact with the search engine directly.
 						</Text>
 					</Box>
-					<Box>
+					<Box maxW='2xl'>
 						<Heading fontSize='xl' marginBottom={2}>Who is using Canister?</Heading>
 						<Text marginBottom={4}>
 							Canister's powerful, yet simple to implement API has led to various popular tools and services in the community to embrace and integrate it into their products. If you would like to use the Canister API to build your next idea, please <Link textDecor='underline' href='mailto:support@aerum.co'>
