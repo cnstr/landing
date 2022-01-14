@@ -1,4 +1,4 @@
-import { Box, ChakraProvider, ColorModeScript, Container, extendTheme, Flex, Grid, Heading, Image, Link, List, ListIcon, ListItem, Spacer, Text } from '@chakra-ui/react'
+import { Box, Button, ChakraProvider, ColorModeScript, Container, extendTheme, Flex, Grid, Heading, Image, Link, List, ListIcon, ListItem, Spacer, Text } from '@chakra-ui/react'
 import { StrictMode } from 'react'
 import ReactDOM from 'react-dom'
 
@@ -32,7 +32,7 @@ ReactDOM.render(
 					<Image width={{ base: 50, md: 75, lg: 90 }} src='/canister.svg' />
 					<Heading fontSize={{ base: 'xl', md: '2xl', lg: '3xl' }} >Canister</Heading>
 				</Flex>
-				<Flex alignItems='center' gridGap={4} flexDir={{ base: 'column-reverse', md: 'row' }}>
+				<Flex alignItems='center' textAlign={{ base: 'center', md: 'left' }} gridGap={4} flexDir={{ base: 'column-reverse', md: 'row' }}>
 					<Box>
 						<Heading
 							fontWeight='bold'
@@ -51,6 +51,9 @@ ReactDOM.render(
 							</Heading>
 							{'.'}
 						</Heading>
+						<Link href='https://docs.canister.me'>
+							<Button size='lg' variant='outline' mt={8}>Get Started with the API</Button>
+						</Link>
 					</Box>
 					<Box>
 						<Image marginX='auto' width={{ sm: 1000, md: 1400, lg: 1800, xl: 2200 }} src='/search.svg' />
@@ -67,7 +70,9 @@ ReactDOM.render(
 					<Box maxW='2xl'>
 						<Heading fontSize='xl' marginBottom={2}>Who is using Canister?</Heading>
 						<Text marginBottom={4}>
-							Canister's powerful, yet simple to implement API has led to various popular tools and services in the community to embrace and integrate it into their products. If you would like to use the Canister API to build your next idea, please <Link textDecor='underline' href='mailto:support@aerum.co'>
+							Canister's powerful, yet simple to implement API has led to various popular tools and services in the community to embrace and integrate it into their products. If you would like to use the Canister API to build your next idea, check out the <Link textDecor='underline' href='https://docs.canister.me'>
+								documentation
+							</Link> or please <Link textDecor='underline' href='mailto:support@aerum.co'>
 								contact me
 							</Link>.
 						</Text>
