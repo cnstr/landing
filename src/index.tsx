@@ -1,10 +1,8 @@
-import { Box, Button, ChakraProvider, ColorModeScript, Container, extendTheme, Flex, Grid, Heading, Image, Link, List, ListIcon, ListItem, Spacer, Text } from '@chakra-ui/react'
+import { Box, Button, ChakraProvider, ColorModeScript, Container, extendTheme, Flex, Heading, Image, Link, Spacer, Text } from '@chakra-ui/react'
+import '@fontsource/inter/latin.css'
+import '@fontsource/raleway/latin.css'
 import { StrictMode } from 'react'
 import ReactDOM from 'react-dom'
-
-import '@fontsource/raleway/latin.css'
-import '@fontsource/inter/latin.css'
-
 
 const theme = extendTheme({
 	fonts: {
@@ -77,14 +75,15 @@ ReactDOM.render(
 							</Link>.
 						</Text>
 
-						<Flex alignItems='center' flexDir={{ base: 'column', md: 'row' }}>
+						<Flex alignItems='center' justifyContent='center' flexDir={{ base: 'column', md: 'row' }}>
 							<Flex alignItems='center' gridGap={4} marginY={4} marginX={2}>
 								<Flex justifyContent='center' alignItems='center' textAlign='center' columnGap={6} flexDir='column'>
 									<Image
-										src='/sileo.svg'
+										src='/sileo.jpg'
+										borderRadius={25}
 										label='Sileo'
-										width={{ base: 100 }}
-										height={{ base: 100 }}
+										width={100}
+										height={100}
 									/>
 									<Link href='https://getsileo.app' isExternal>
 										<Text fontSize='sm' marginTop={3}>Sileo</Text>
@@ -92,10 +91,11 @@ ReactDOM.render(
 								</Flex>
 								<Flex justifyContent='center' alignItems='center' textAlign='center' columnGap={6} flexDir='column'>
 									<Image
-										src='/chariz.svg'
+										src='/chariz.jpg'
+										borderRadius={25}
 										label='Chariz'
-										width={{ base: 100 }}
-										height={{ base: 100 }}
+										width={100}
+										height={100}
 									/>
 									<Link href='https://chariz.com' isExternal>
 										<Text fontSize='sm' marginTop={3}>Chariz</Text>
@@ -106,21 +106,23 @@ ReactDOM.render(
 							<Flex alignItems='center' gridGap={4} marginY={4} marginX={2}>
 								<Flex justifyContent='center' alignItems='center' textAlign='center' columnGap={6} flexDir='column'>
 									<Image
-										src='/packix.svg'
-										label='Packix'
-										width={{ base: 100 }}
-										height={{ base: 100 }}
+										src='/zebra.jpg'
+										borderRadius={25}
+										label='Zebra'
+										width={100}
+										height={100}
 									/>
-									<Link href='https://repo.packix.com' isExternal>
-										<Text fontSize='sm' marginTop={3}>Packix</Text>
+									<Link href='https://getzbra.com' isExternal>
+										<Text fontSize='sm' marginTop={3}>Zebra</Text>
 									</Link>
 								</Flex>
 								<Flex justifyContent='center' alignItems='center' textAlign='center' columnGap={6} flexDir='column'>
 									<Image
-										src='/rjailbreak.svg'
+										src='/rjb.jpg'
+										borderRadius={25}
 										label='r/Jailbreak'
-										width={{ base: 100 }}
-										height={{ base: 100 }}
+										width={100}
+										height={100}
 									/>
 									<Link href='https://discord.gg/jb' isExternal>
 										<Text fontSize='sm' marginTop={3}>r/Jailbreak</Text>
@@ -130,10 +132,11 @@ ReactDOM.render(
 							<Flex alignItems='center' gridGap={4} marginY={4} marginX={2}>
 								<Flex justifyContent='center' alignItems='center' textAlign='center' columnGap={6} flexDir='column'>
 									<Image
-										src='/tweakreviewsdb.svg'
+										src='/tweakreviewsdb.jpg'
+										borderRadius={25}
 										label='TweakReviewsDB'
-										width={{ base: 100 }}
-										height={{ base: 100 }}
+										width={100}
+										height={100}
 									/>
 									<Link href='https://tweakreviews.pixelomer.com' isExternal>
 										<Text fontSize='sm' marginTop={3}>TweakReviewsDB</Text>
