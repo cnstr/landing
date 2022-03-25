@@ -1,6 +1,7 @@
 import { Box, Button, ChakraProvider, ColorModeScript, Container, extendTheme, Flex, Heading, Image, Link, Spacer, Text } from '@chakra-ui/react'
 import '@fontsource/inter/latin.css'
 import '@fontsource/raleway/latin.css'
+import Analytics from './analytics'
 import { StrictMode } from 'react'
 import ReactDOM from 'react-dom'
 
@@ -59,6 +60,7 @@ ReactDOM.render(
 				</Flex>
 				<Spacer margin={8} />
 				<Flex gridGap={6} flexDir='column' alignItems='center'>
+					<Analytics />
 					<Box maxW='2xl'>
 						<Heading fontSize='xl' marginBottom={2}>What is Canister?</Heading>
 						<Text marginBottom={4}>
