@@ -15,7 +15,7 @@ export default function Analytics() {
 		fetch('https://api.tale.me/v1/analytics/canister')
 			.then((res) => res.json())
 			.then((json) => {
-				setGb(json.totalBytes.toFixed(2).toLocaleString('en-US'))
+				setGb(json.totalGb.toFixed(2).toLocaleString('en-US'))
 				setViews(json.pageViews.toLocaleString('en-US'))
 				setRequests(json.requests.toLocaleString('en-US'))
 			}).catch(e => console.log(e))
