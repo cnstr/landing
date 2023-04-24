@@ -1,14 +1,15 @@
-import { ChakraProvider, extendTheme } from '@chakra-ui/react'
+import { Box, ChakraProvider, extendTheme } from '@chakra-ui/react'
 import '@fontsource/epilogue'
 import '@fontsource/manrope/latin.css'
 import '@fontsource/sora'
 import Layout from 'components/Layout'
-import { StrictMode } from 'react'
+import { type ReactNode, StrictMode, Suspense, lazy } from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Home from 'routes/Home'
-import Privacy from 'routes/Privacy'
-import V1EOL from 'routes/V1EOL'
+
+const Home = lazy(() => import('routes/Home'))
+const Privacy = lazy(() => import('routes/Privacy'))
+const V1EOL = lazy(() => import('routes/V1EOL'))
 
 const theme = extendTheme({
 	fonts: {
@@ -26,15 +27,23 @@ const theme = extendTheme({
 	}
 })
 
+function LazySuspense({ children }: { children: ReactNode }) {
+	return (
+		<Suspense fallback={<Box />}>
+			{children}
+		</Suspense>
+	)
+}
+
 export default function App() {
 	return (
 		<ChakraProvider theme={theme}>
 			<BrowserRouter>
 				<Layout>
 					<Routes>
-						<Route path='/' element={<Home />} />
-						<Route path='/privacy' element={<Privacy />} />
-						<Route path='/v1-eol' element={<V1EOL />} />
+						<Route path='/' element={<LazySuspense><Home /></LazySuspense>} />
+						<Route path='/privacy' element={<LazySuspense><Privacy /></LazySuspense>} />
+						<Route path='/v1-eol' element={<LazySuspense><V1EOL /></LazySuspense>} />
 					</Routes>
 				</Layout>
 			</BrowserRouter>
