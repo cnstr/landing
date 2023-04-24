@@ -8,6 +8,7 @@ import ReactDOM from 'react-dom'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from 'routes/Home'
 import Privacy from 'routes/Privacy'
+import V1EOL from 'routes/V1EOL'
 
 const theme = extendTheme({
 	fonts: {
@@ -33,6 +34,7 @@ export default function App() {
 					<Routes>
 						<Route path='/' element={<Home />} />
 						<Route path='/privacy' element={<Privacy />} />
+						<Route path='/v1-eol' element={<V1EOL />} />
 					</Routes>
 				</Layout>
 			</BrowserRouter>
