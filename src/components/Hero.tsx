@@ -10,20 +10,20 @@ export default function Hero() {
 					textAlign={{ base: 'center', md: 'left' }}
 				>
 					{'A powerful '}
-					<Text d='inline' fontSize='inherit' color='messenger.500'>
+					<Text display='inline' fontSize='inherit' color='messenger.500'>
 						search engine
 					</Text>
 					{' created '}
 					{' for '}
-					<Text d='inline' fontSize='inherit' color='messenger.600'>
+					<Text display='inline' fontSize='inherit' color='messenger.600'>
 						software.
 					</Text>
 				</Heading>
 				<Text my={4}>
 					Canister let's you explore hundreds of thousands of programs across iOS and Linux software repositories.
 				</Text>
-				<Link href='https://docs.canister.me/'>
-					<Button size='lg' variant='solid' colorScheme='messenger' zIndex='hide' mt={8}>Get Started</Button>
+				<Link isExternal href='https://docs.canister.me/'>
+					<Button size='lg' variant='solid' colorScheme='messenger' mt={8}>Get Started</Button>
 				</Link>
 			</Box>
 			<Box>
