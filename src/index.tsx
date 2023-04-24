@@ -4,7 +4,7 @@ import '@fontsource/manrope/latin.css'
 import '@fontsource/sora'
 import Layout from 'components/Layout'
 import { type ReactNode, StrictMode, Suspense, lazy } from 'react'
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 const Home = lazy(() => import('routes/Home'))
@@ -52,9 +52,9 @@ export default function App() {
 	)
 }
 
-ReactDOM.render(
+const root = document.getElementById('root')!
+ReactDOM.createRoot(root).render(
 	<StrictMode>
 		<App />
-	</StrictMode>,
-	document.getElementById('root')
-);
+	</StrictMode>
+)
