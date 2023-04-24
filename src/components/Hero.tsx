@@ -16,9 +16,8 @@ export default function Hero() {
 					{' created '}
 					{' for '}
 					<Text d='inline' fontSize='inherit' color='messenger.600'>
-						software
+						software.
 					</Text>
-					{'.'}
 				</Heading>
 				<Text my={4}>
 					Canister let's you explore hundreds of thousands of programs across iOS and Linux software repositories.
